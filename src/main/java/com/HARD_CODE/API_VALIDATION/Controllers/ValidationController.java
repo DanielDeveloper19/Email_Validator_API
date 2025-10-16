@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-
 @CrossOrigin(origins = "*")
 public class ValidationController {
 
@@ -21,6 +20,8 @@ public class ValidationController {
     @PostMapping("/validate")
     public ValidationResultDto validate(@RequestBody Map<String, String> request) {
         String email = request.get("email");
+
+        System.out.println("Incoming email: " + email);
 
         if (email == null || email.isEmpty()) {
             return new ValidationResultDto("", false, "email requerido");
