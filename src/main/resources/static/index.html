@@ -139,6 +139,44 @@
             background: #f7f7f7;
             margin-top: 60px;
         }
+
+        .features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlighted "Save Money" box */
+.feature-highlight {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-size: 1.2em;
+  width: 520px;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
     </style>
 </head>
 
@@ -146,7 +184,7 @@
     <header>
         <div class="container">
             <h1>📧 Email Validator API</h1>
-            <p class="subtitle">Validate emails in bulk. Fast, reliable, and easy to use.</p>
+            <p class="subtitle">Reduce email bounce rates by 90%. Improve deliverability. Save money on failed campaigns.</p>
             <a href="#pricing" class="cta">Get Started Free</a>
         </div>
     </header>
@@ -154,19 +192,30 @@
     <section class="container">
         <h2>Why Use Our API?</h2>
         <div class="features">
-            <div class="feature">
-                <h3>⚡ Fast Validation</h3>
-                <p>Validate emails in milliseconds with our optimized API.</p>
-            </div>
-            <div class="feature">
-                <h3>📊 Bulk Processing</h3>
-                <p>Process hundreds of emails at once with our bulk endpoint.</p>
-            </div>
-            <div class="feature">
-                <h3>🔒 Secure & Reliable</h3>
-                <p>Your data is safe. We don't store emails after validation.</p>
-            </div>
-        </div>
+
+      <!-- 💰 Featured Box -->
+    <div class="feature feature-highlight">
+        <h3>💰 Save Money</h3>
+        <p>Stop wasting $ on invalid emails.<br>
+           Clean your list before sending campaigns.</p>
+    </div>
+            
+    <div class="feature">
+        <h3>⚡ Fast Validation</h3>
+        <p>Validate emails in milliseconds with our optimized API.</p>
+    </div>
+    <div class="feature">
+        <h3>📊 Bulk Processing</h3>
+        <p>Process hundreds of emails at once with our bulk endpoint.</p>
+    </div>
+    <div class="feature">
+        <h3>🔒 Secure & Reliable</h3>
+        <p>Your data is safe. We don't store emails after validation.</p>
+    </div>
+
+  
+</div>
+
     </section>
 
     <section class="container">
